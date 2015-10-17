@@ -1,9 +1,8 @@
-// package mongostore can be used to work with MongoDB database 
+// package mongostore can be used to work with MongoDB database
 package mongostore
 
 import (
 	"errors"
-	"fmt"
 	"log"
 
 	"gopkg.in/mgo.v2"
@@ -51,10 +50,10 @@ func (mc *MongoConn) Connect() (err error) {
 		DropDups: true,
 	}
 	URLCollection.EnsureIndex(index)
-	return n
+	return nil
 }
 
-// GetSessionAndCollection can be used as a connection pool, 
+// GetSessionAndCollection can be used as a connection pool,
 // on each call it copies and returns current session
 func (mc *MongoConn) GetSessionAndCollection() (session *mgo.Session, collection *mgo.Collection, err error) {
 	if mc.session != nil {
