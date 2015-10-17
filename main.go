@@ -6,8 +6,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/Maksadbek/shorturl/models"
-	"github.com/Maksadbek/shorturl/mongostore"
+	"github.com/Maksadbek/go-url-shortener/models"
+	"github.com/Maksadbek/go-url-shortener/mongostore"
 	"github.com/gorilla/mux"
 )
 
